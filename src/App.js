@@ -51,28 +51,28 @@ console.log(favFruits)
 export default class App extends Component {
   render() {
 
-    // const movies = oneArrayToRuleThemAll.map((movie, i) => {
-    //   console.log(`index ${i}:`, movie, `movie${i}`)
-    //   return (
-    //     <Movie 
-    //       title={movie.title}
-    //       hours={movie.hours}
-    //       minutes={movie.minutes}
-    //       key={`movie${i}`}
-    //     />
-    //   )
-    // })
-
-    const movies = []
-
-    oneArrayToRuleThemAll.forEach((movie, i) => {
-      movies.push(<Movie 
-        title={movie.title}
-        hours={movie.hours}
-        minutes={movie.minutes}
-        key={`movie${i}`}
-      />)
+    const movies = oneArrayToRuleThemAll.map((movie, i) => {
+      console.log(`index ${i}:`, movie, `movie${i}`)
+      return (
+        <Movie 
+          title={movie.title}
+          hours={movie.hours}
+          minutes={movie.minutes}
+          key={`movie${i}`}
+        />
+      )
     })
+
+    // const movies = []
+
+    // oneArrayToRuleThemAll.forEach((movie, i) => {
+    //   movies.push(<Movie 
+    //     title={movie.title}
+    //     hours={movie.hours}
+    //     minutes={movie.minutes}
+    //     key={`movie${i}`}
+    //   />)
+    // })
     console.log(movies)
     return (
       <div>
